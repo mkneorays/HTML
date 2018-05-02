@@ -35,6 +35,7 @@ class Hello extends React.Component{
 	 //its return only boolean value 
 	 //if retutn true its means method render
 	 //if false  its means method not render
+	 
 	 shouldComponentUpdate(){
 		  console.log("shouldComponentUpdate");
 	 if(this.state.count > 10){
