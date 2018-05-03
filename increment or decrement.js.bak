@@ -1,0 +1,51 @@
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import './index.css';
+class Hello extends React.Component{
+	//u can define constructor also
+	constructor(){
+	  super(); //this is mandateroy
+	 console.log("constructor");
+	 
+	   
+	   //this is a state
+	  this.state={
+	    count:0 , count1:20
+	  }//state
+	}//constructor  //life cycle method  (1)
+//this is a function call
+  intCount =() =>{
+   this.setState({
+     count : this.state.count + 1
+   })
+  }//function
+	 
+	 //this is another function call
+  intCount1 =() =>{
+   this.setState({
+     count1 : this.state.count1 - 1
+   })
+  }//function
+
+	 
+	
+   
+render(){
+	 console.log("rendering");
+return (
+ <h1>Hello Good Morning <br/><br/>
+	{this.state.count}
+  <button onClick={this.intCount}>INCREMENT</button>
+	 <br/>	  <br/>
+	  <br/>	  <br/> 
+{this.state.count1}
+  
+ <button onClick={this.intCount1}>DECREMENT</button>
+</h1>	)
+}//render method  //life cycle method (3)
+}//class
+
+ReactDOM.render(<Hello/>,document.getElementById("root"))
+
